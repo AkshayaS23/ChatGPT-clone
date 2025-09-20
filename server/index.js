@@ -12,6 +12,11 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("🚀 ChatGPT Backend is live on Vercel!");
+});
+
+
 // API route
 app.post("/api/chat", async (req, res) => {
   const { message, history } = req.body;
