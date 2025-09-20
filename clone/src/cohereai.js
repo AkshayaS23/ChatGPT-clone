@@ -7,7 +7,7 @@ export async function sendMsgToCohere(userMessage, abortController, fullHistory 
       message: msg.text,
     }));
 
-  const res = await fetch("https://chat-gpt-clone-ivory-tau.vercel.app//api/chat", {
+  const res = await fetch(`${process.env.REACT_APP_API_URL}/api/chat`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
